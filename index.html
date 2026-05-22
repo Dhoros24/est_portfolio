@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=100%"/>
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				font-family:sans-serif;
+				box-sizing:border-box;
+			}
+			.top_nav{
+				padding:10px;
+				background:linear-gradient(45deg, #B5C4D6, #4E1260);
+				border-buttom:1px solid #ccc;
+			}
+			.logo{
+				float:right;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				width:40px;
+				height:40px;
+				padding:15px;
+				border-radius:50%;
+				background:#333;
+				color:white;
+				font-size:15px !important;
+			}
+			body{
+				background:#f5f6fa;
+			}
+			.ton{
+				font-size:30px !important;
+				color:#333;
+				align-items:center;
+				width:50px;
+				height:50px
+			}
+			.message{
+				padding:20px 30px;
+				background:linear-gradient(45deg, #4E1260, #0D0A14);
+				color:white;
+			}
+			.message h4{
+				font-size:36px;
+				/*line-height:40px;*/
+				color:#fff;
+				line-height:70px;
+				margin-bottom:10px;
+			}
+			.message p{
+				line-height:35px;
+				padding:20px 10px;
+				color:#fff;
+				border-radius:10px;
+				
+			}
+			.message button{
+				padding:14px 10px;
+				background:#333;
+				color:#fff;
+				border-radius:5px;
+				font-size:17px !important;
+				margin-top:20px;
+				transition:0.5s;
+				border:none;
+			}
+			.message button:hover{
+				background:#ccc;
+				color:black;
+				border-radius:3px;
+				cursor:pointer;
+			}
+			.project{
+				width:100%;
+				padding:20px 20px;
+				border:1px solid #333;
+				position:absolute;
+				border-radius:5px;
+				background-color:purple;
+				animation:floatee -5s linear forwards;
+			}
+			.sub{
+				display:grid;
+				grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+			}
+			.sub_parent{
+				padding:15px;
+				gap:30px;
+				bottom:0;
+				width:100%;
+				padding:20px;
+			}
+			.child{
+				padding:20px 30px;
+				margin:20px 30px;
+				border:1px solid #ccc;
+				background:#8838FF;
+				color:#fff;
+				border-radius:10px;
+				float:left;
+			}
+			.project h3{
+				float:left;
+				margin:20px;
+				color:#000;
+				font-size:20px !important;
+
+			}
+			.about{
+				float:left;
+				width:100%;
+				background:#FFA8FF;
+				color:#000;
+
+			}
+			.sub_pat{
+				background:#0D0A14;
+
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="top_nav">
+			<span><b class="ton">&#9776;</b></span>
+			<div class="logo">
+			DH
+			</div>
+		</nav>
+		<center>
+		<div class="message">
+			<h4>Hi, WELCOME TO MY PORTFOLIO</h4>
+			<p><b>My name is Dhoro a lover of tech and design, hence the reason i took it upon myself to acquire this knowledge 
+			<br>
+			and be able to solve human problems in my own best way</b></p>
+			<br />
+			<p>Featured work and creative project</p>
+			<br /> <br />
+			<button>View my work</button>
+		</div>
+		</center>
+		<div class="project">
+			<h3>Featured projects</h3>
+			<div class="sub">
+				<div class="sub_parent">
+				<div class="child">Project image 
+					<p>PROJECT 1
+					<br>
+					Brief discription 
+					<br>
+					of the project here
+					</p>
+				</div>
+				<div class="child">Project image 
+					<p>PROJECT 2
+					<br>
+					Brief discription 
+					<br>
+					of the project here
+					</p>
+				</div>
+				<div class="child">Project image 
+					<p>PROJECT 3
+					<br>
+					Brief discription 
+					<br>
+					of the project here
+					</p>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="about">
+			<p>About me</p>
+			<div class="sub_pat">
+				<div class="child_1"> 
+					<img src="" alt="">
+				</div>
+				<div class="child_1"> 
+					<p>Brief discription and background</p>
+					<p>Highlight your skills and experience in a few compelling lines of text</P>
+				</div>
+				<button class="view">Learn more</button>
+			</div>
+		</div>
+		<div class="ready">
+			<b>Ready to work together?</b>
+			<p>Get in touch and let's creat something amazind</p>
+		</div>
+		<button class="start">Start a project</button>
+		<div class="bottom_nav">
+			<P>&copy; 2026 Dhoro. ALL Rights Reseverved</P>
+		</div>
+	</body>
+</html>
