@@ -84,13 +84,27 @@
 				background:#FFA8FF;
 				display:grid;
 				grid-template-column:repeat(auto-fit, minmax(300px,1fr));
+				gap:20px;
 			}
 			.child{
 				border:1px solid #ccc;
-				background:#8838FF;
+				background:rgb(0, 0, 0.5);
 				color:#fff;
-				border-radius:13px;
+				border-radius:12px;
 				line-height:32px;
+			}
+			.child:hover{
+				transform:translate(-20px);
+				transition:.3s Linear;
+				opacity:.9;
+			}
+			.child_img{
+				width:100%;
+				border-top-left-radius:12px;
+				border-top-right-radius:12px;
+			}
+			.child p{
+				padding:20px;
 			}
 			.about{
 				float:left;
