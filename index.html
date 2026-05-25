@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=100%"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<title></title>
 		<style>
 			*{
@@ -10,7 +11,7 @@
 				box-sizing:border-box;
 			}
 			.top_nav{
-				padding:10px;
+				padding:10px 25px;
 				background:linear-gradient(45deg, #B5C4D6, #4E1260);
 				border-buttom:1px solid #ccc;
 			}
@@ -37,6 +38,10 @@
 				width:50px;
 				height:50px
 			}
+			.ton:hover{
+				cursor:pointer;
+				color:#610061;
+			}
 			.message{
 				padding:20px 30px;
 				background:linear-gradient(45deg, #4E1260, #0D0A14);
@@ -52,7 +57,9 @@
 			.message p{
 				line-height:35px;
 				padding:20px 10px;
-				color:#fff;
+				color:#333;
+				max-width:300px;
+				background:#FAE0F5;
 				border-radius:10px;
 				
 			}
@@ -73,124 +80,216 @@
 				cursor:pointer;
 			}
 			.project{
-				width:100%;
-				padding:20px 20px;
-				border:1px solid #333;
-				position:absolute;
-				border-radius:5px;
-				background-color:purple;
-				animation:floatee -5s linear forwards;
+				background:#FAE0F5;
 			}
 			.sub{
-				display:grid;
-				grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+				padding:30px:
 			}
 			.sub_parent{
-				padding:15px;
-				gap:30px;
+				display: grid;
+				grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+				gap:20px;
+			}
+			.child{
+				background:rgb(0, 0, 0.5);
+				color:#fff;
+				border-radius:12px;
+				line-height:32px;
+			}
+			.child:hover{
+				transform:translate(-8px);
+				transition:.3s Linear;
+				opacity:.9;
+			}
+			.child_img{
+				width:100%;
+				border-top-left-radius:12px;
+				border-top-right-radius:12px;
+			}
+			.child p{
+				padding:20px;
+			}
+			.about{
+				background:linear-gradient(45deg,  #0D0A14, #FAE0F5);
+			}
+			.sub_pat{
+				padding:30px:
+			}
+			.pat{
+				display: grid;
+				grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+				gap:20px;
+			}
+			.child_1{
+				background::#FAE0F5;
+				color:#610061;
+			}
+			.child_1 p{
+				padding:20px;
+				justify-items:center;
+			}
+			.me_img{
+				width:80%;
+				margin:20px;
+				border-top-left-radius:12px;
+				border-top-right-radius:12px;
+			}
+			.sub_pat button{
+				padding:14px 10px;
+				background:#333;
+				color:#fff;
+				border-radius:5px;
+				font-size:17px !important;
+				transition:0.5s;
+				border:none;
+			}
+			.ready{
+				padding:20px 30px;
+				background:#4E1260;
+				color:#fff;
+			}
+			.start{
+				padding:10px;
+				margin-top:-50px;
+				background:#333;
+				color:#fff;
+				border-radius:5px;
+				font-size:17px !important;
+				transition:0.5s;
+				border:none;
+				width:20%;
+			}
+			.bottom_nav{
+				display:grid;
+				grid-template-columns: repeat(4, 1fr);
 				bottom:0;
+				background:linear-gradient(45deg, #B5C4D6, #4E1260);
+				border-top:1px solid #ccc;
 				width:100%;
 				padding:20px;
 			}
-			.child{
+			/*side navigation design*/
+			.side{
+				background:linear-gradient(45deg, #4E1260, #0D0A14);
+				height:100vh;
+				position:fixed;
+				height:100vh;
+				width:270px;
+				z-index:9999;
+				display:none;
+			}
+			.side i{
+				display:block;
+				text-decoration:none;
+				color:#ccc;
 				padding:20px 30px;
-				margin:20px 30px;
-				border:1px solid #ccc;
-				background:#8838FF;
-				color:#fff;
-				border-radius:10px;
-				float:left;
 			}
-			.project h3{
-				float:left;
-				margin:20px;
+			.side i:hover{
+				cursor:pointer;
 				color:#000;
-				font-size:20px !important;
-
+				background:#610061;
+				padding-right:30px;
+				transition:.5s ease-in-out;
 			}
-			.about{
-				float:left;
-				width:100%;
-				background:#FFA8FF;
-				color:#000;
-
+			.fa{
+				padding:5px;
 			}
-			.sub_pat{
-				background:#0D0A14;
-
+			.fa:hover{
+				border-radius:6px;
+				padding:8px;
+				transition:.9s ease-in-out;
 			}
 		</style>
 	</head>
 	<body>
 		<nav class="top_nav">
-			<span><b class="ton">&#9776;</b></span>
+			<span class="popup" onclick="toggle_pop()"><b class="ton">&#9776;</b></span>
 			<div class="logo">
 			DH
 			</div>
 		</nav>
+		<div class="side" id="popup">
+			<i class="fa fa-home">&nbsp;&nbsp;&nbsp;HOME</i>
+			<i class="fa fa-gear">&nbsp;&nbsp;&nbsp;SETTINGS</i>
+			<i class="fa fa-envelope">&nbsp;&nbsp;&nbsp;CONTACT</i>
+			<i class="fa fa-user">&nbsp;&nbsp;&nbsp;USER</i>
+			<i class="fa fa-power-off">&nbsp;&nbsp;&nbsp;SIGN OUT</i>
+		</div>
 		<center>
 		<div class="message">
 			<h4>Hi, WELCOME TO MY PORTFOLIO</h4>
-			<p><b>My name is Dhoro a lover of tech and design, hence the reason i took it upon myself to acquire this knowledge 
-			<br>
-			and be able to solve human problems in my own best way</b></p>
+			<p><b>
+				In need of a fullstack developer?
+				or a web site developer for your business.
+				we are right here at your service
+			</b></p>
 			<br />
-			<p>Featured work and creative project</p>
-			<br /> <br />
 			<button>View my work</button>
 		</div>
 		</center>
 		<div class="project">
-			<h3>Featured projects</h3>
+			<h3 style="padding:15px 30px;"><b style="color:blue;">Featured projects</b></h3>
 			<div class="sub">
 				<div class="sub_parent">
-				<div class="child">Project image 
-					<p>PROJECT 1
-					<br>
-					Brief discription 
-					<br>
-					of the project here
+				<div class="child">
+					<img src="land1.jpeg" class="child_img" alt="pictures">
+					<p class="description">
+						we produce quality shoes
 					</p>
 				</div>
-				<div class="child">Project image 
-					<p>PROJECT 2
-					<br>
-					Brief discription 
-					<br>
-					of the project here
+				<div class="child">
+					<img src="land2.jpg" class="child_img" alt="pictures">
+					<p class="description">
 					</p>
 				</div>
-				<div class="child">Project image 
-					<p>PROJECT 3
-					<br>
-					Brief discription 
-					<br>
-					of the project here
+				<div class="child">
+					<img src="land3.jpg" class="child_img" alt="pictures">
+					<p class="description">
 					</p>
 				</div>
 			</div>
 			</div>
 		</div>
 		<div class="about">
-			<p>About me</p>
+			<p style="padding:15px 30px;"><b style="color:white;">About me</b></p>
+			<center>
 			<div class="sub_pat">
-				<div class="child_1"> 
-					<img src="" alt="">
+				<div class="pat">
+					<div class="child_1"> 
+						<img src="me.jpg" class="me_img" alt="pictures">
+					</div>
+					<div class="child_1"> 
+						<p><b>My name is Dhoro, i am a lover of tech and designs. Hence the reason i took it upon myself to acquire this knowledge
+							<br>
+							so as to be able to solve human problems in my own best way</b></p>
+						</p>
+						<p><b>Fullstack Developer</b></P>
+					</div>
 				</div>
-				<div class="child_1"> 
-					<p>Brief discription and background</p>
-					<p>Highlight your skills and experience in a few compelling lines of text</P>
-				</div>
-				<button class="view">Learn more</button>
+				<button>Learn more</button>
 			</div>
+		</center>
 		</div>
 		<div class="ready">
 			<b>Ready to work together?</b>
-			<p>Get in touch and let's creat something amazind</p>
+			<p>Get in touch and let's creat something amazing</p>
 		</div>
+		<center>
 		<button class="start">Start a project</button>
+		</center>
+		<br>
 		<div class="bottom_nav">
 			<P>&copy; 2026 Dhoro. ALL Rights Reseverved</P>
 		</div>
+		<script>
+			let popup = document.getElementById("popup");
+			function toggle_pop(){
+				if (popup.style.display === 'block'){
+					popup.style.display = 'none';
+				}else{
+					popup.style.display = 'block';
+				}
+			}
+		</script>
 	</body>
 </html>
