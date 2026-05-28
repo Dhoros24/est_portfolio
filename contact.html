@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width initial-scale=1%"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				font-family:sans-serif;
+				box-sizing:border-box;
+			}
+			body{
+				background:#f5f6fa;
+			}
+			.top_nav{
+				padding:10px 25px;
+				background:linear-gradient(45deg, #B5C4D6, #4E1260);
+				border-buttom:1px solid #ccc;
+			}
+			.logo{
+				float:right;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				width:40px;
+				height:40px;
+				padding:15px;
+				border-radius:50%;
+				background:#333;
+				color:white;
+				font-size:15px !important;
+			}
+			.ton{
+				font-size:30px !important;
+				color:#333;
+				align-items:center;
+				width:50px;
+				height:50px
+			}
+			.ton:hover{
+				cursor:pointer;
+				color:#610061;
+			}
+			.contact{
+				padding:20px 30px;
+				background:linear-gradient(45deg, #4E1260, #0D0A14);
+				color:white;
+			}
+			.contact h4{
+				font-size:36px;
+				/*line-height:40px;*/
+				color:#fff;
+				line-height:70px;
+				margin-bottom:10px;
+			}
+			.form{
+				max-width:400px;
+				max-height:500px;
+				background:linear-gradient(45deg, #B5C4D6, #4E1260);
+				padding:20px;
+				border:1px solid #ccc;
+			}
+			.label{
+				float:left;
+				color:#fff;
+			}
+			.input{
+				display:block;
+				width:100%;
+				padding:10px;
+				background:#fff;
+				border-radius:12px;
+				margin:15px 0;
+			}
+			.textarea{
+				display:block;
+				width:100%;
+				height:250px;
+				padding:10px;
+				background:#fff;
+				margin:15px 0;
+			}
+			.but{
+				padding:6px;
+				background:purple;
+				color:#fff;
+				border-radius:10px;
+				font-size:17px !important;
+				transition:0.5s;
+				border:none;
+				margin:10px 30px;
+			}
+			.sub{
+				background:#f2f2f2;
+				color:#333;
+			}
+			.sub_bat{
+				padding:20px:
+			}
+			.bat{
+				display: grid;
+				grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+				gap:8px;
+			}
+			.child{
+				background:#FAE0F5;
+				color:#000;
+				width:55%;
+				padding:10px;
+				margin:10px;
+				border-radius:5px;
+			}
+			.child a{
+				text-decoration:none;
+				color:#000;
+			}
+			.child a:hover{
+				cursor:pointer;
+				color:#fff;
+				background:#333;
+				border-radius:5px;
+				transition:.5s ease-in-out;
+			}
+			.las{
+				background:black;
+				color:#fff;
+			}
+			.bottom_nav{
+				display:flex;
+				bottom:0;
+				background:linear-gradient(45deg, #B5C4D6, #4E1260);
+				border-top:1px solid #ccc;
+				width:100%;
+				padding:20px;
+			}
+			/*side navigation design*/
+			.side{
+				background:linear-gradient(45deg, #4E1260, #0D0A14);
+				height:100vh;
+				position:fixed;
+				height:100vh;
+				width:270px;
+				z-index:9999;
+				display:none;
+			}
+			.side a{
+				text-decoration:none;
+			}
+			.side i{
+				display:block;
+				text-decoration:none;
+				color:#ccc;
+				padding:20px 30px;
+			}
+			.side i:hover{
+				cursor:pointer;
+				color:#000;
+				background:#610061;
+				padding-right:30px;
+				transition:.5s ease-in-out;
+			}
+			.fa{
+				padding:5px;
+			}
+			.fa:hover{
+				border-radius:6px;
+				padding:8px;
+				transition:.9s ease-in-out;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="top_nav">
+			<span class="popup" onclick="toggle_pop()"><b class="ton">&#9776;</b></span>
+			<div class="logo">
+				DH
+			</div>
+		</nav>
+		<div class="side" id="popup">
+			<a href="index.html"><i class="fa fa-home">&nbsp;&nbsp;&nbsp;HOME</i></a>
+			<a href="services.html"><i class="fa fa-gear">&nbsp;&nbsp;&nbsp;SERVICES</i></a>
+			<a href="contact.html"><i class="fa fa-envelope">&nbsp;&nbsp;&nbsp;CONTACT</i></a>
+		</div>
+		<center>
+			<div class="contact">
+				<h4>Get <b style="color:purple;">in</b> touch</h4>
+				<p>
+				Have a project in mind? Let Discuss
+				</p>
+			</div>
+		</center>
+		<h3 style="padding:15px 30px;"><b style="color:purple;">Send</b> a message</h3>
+		<center>
+		<div class="form">
+			<label class="label" for="Full name">Full name</label>
+				<input type="text" class="input"/>
+			<label class="label" for="Email address">Email address</label>
+				<input type="email" class="input"/>
+			<label class="label" for="message">Message</label>
+				<textarea class="textarea"></textarea>
+		</div>
+		</center>
+		<br>
+		<button class="but">Send message</button>
+		<div class="sub">
+				<h3 style="padding:15px 30px;"><b style="color:purple;">Other</b> ways to reach me</h3>
+			<div class="sub_bat">
+				<div class="bat">
+					<div class="child">
+						<p><b>Email</b></p>
+						<p><a href="mailto:adjegbune.esther@gmail.com">adjegbune.esther@gmail.com</a></p>
+						<p>response within 24hrs</p>
+					</div>
+					<div class="child">
+						<p><b>Phone</b></p>
+						<p><a href="tel:+2348150268042">+2348150268042</a></p>
+						<p>Mon-fri, 9am-5pm</p>
+					</div>
+					<div class="child">
+						<p><b>Social</b></p>
+						<p>Twiter, whatsapp, instagram for daily post</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="las">
+				<p><b>Typically respond within 24hrs</b></p>
+				<P>For urgent matters, please call directly or message on social media</P>
+		</div>
+		<div class="bottom_nav">
+			<P><b>&copy; 2026 Dhoro. ALL Rights Reseverved</b></P>
+		</div>
+		<script>
+			let popup = document.getElementById("popup");
+			function toggle_pop(){
+				if (popup.style.display === 'block'){
+					popup.style.display = 'none';
+				}else{
+					popup.style.display = 'block';
+				}
+			}
+		</script>
+	</body>	
+</html>

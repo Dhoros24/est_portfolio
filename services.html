@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1%">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				font-family:sans-serif;
+				box-sizing:border-box;
+			}
+			.top_nav{
+				padding:10px 25px;
+				background:linear-gradient(45deg, #B5C4D6, #4E1260);
+				border-buttom:1px solid #ccc;
+			}
+			.logo{
+				float:right;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				width:40px;
+				height:40px;
+				padding:15px;
+				border-radius:50%;
+				background:#333;
+				color:white;
+				font-size:15px !important;
+			}
+			body{
+				background:#f5f6fa;
+			}
+			.ton{
+				font-size:30px !important;
+				color:#333;
+				align-items:center;
+				width:50px;
+				height:50px
+			}
+			.ton:hover{
+				cursor:pointer;
+				color:#610061;
+			}
+			.service{
+				padding:20px 30px;
+				background:linear-gradient(45deg, #4E1260, #0D0A14);
+				color:white;
+			}
+			.service h4{
+				font-size:36px;
+				/*line-height:40px;*/
+				color:#fff;
+				line-height:70px;
+				margin-bottom:10px;
+			}
+			.service p{
+				line-height:25px;
+				padding:20px 8px;
+				color:#000;
+				background:#FAE0F5;
+				max-width:400px;
+				border-radius:10px;
+				text-align:center;
+			}
+			.aim p{
+				padding:0 30px;
+				color:#000;
+			}
+			.core{
+				background:linear-gradient(45deg, #B5C4D6, #4E1260);
+			}
+			.cub{
+				padding:30px:
+			}
+			.cub_parent{
+				display: grid;
+				grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+				gap:20px;
+			}
+			.cud{
+				background:#FAE0F5;
+				color:#000;
+				border-radius:5px;
+				line-height:32px;
+				padding:10px;
+				margin:10px;
+			}
+			.cub button{
+				width:50%;
+				padding:5px;
+				background:purple;
+				color:#fff;
+				border-radius:10px;
+				font-size:17px !important;
+				transition:0.5s;
+				border:none;
+			}
+			.work{
+				background:#FAE0F5;
+			}
+			.work_how{
+				padding:30px:
+			}
+			.work_parent{
+				display: grid;
+				grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+				gap:20px;
+			}
+			.woh{
+				background:linear-gradient(45deg, #B5C4D6, #4E1260);
+				color:#000;
+				border-radius:5px;
+				line-height:32px;
+				padding:10px;
+				margin:10px;
+			}
+			.lets{
+				background:#B5C4D6;
+				line-height:25px;
+				padding:8px;
+				margin:10px;
+				color:#000;
+				max-width:400px;
+				border-radius:10px;
+				text-align:center;
+			}
+			.lets button{
+				padding:10px;
+				margin:10px;
+				background:#4E1260;
+				color:#fff;
+				border-radius:10px;
+				font-size:17px !important;
+				transition:0.5s;
+				border:none;
+			}
+			.bottom_nav{
+				display:flex;
+				bottom:0;
+				background:linear-gradient(45deg, #B5C4D6, #4E1260);
+				border-top:1px solid #ccc;
+				width:100%;
+				padding:20px;
+			}
+			/*side navigation design*/
+			.side{
+				background:linear-gradient(45deg, #4E1260, #0D0A14);
+				height:100vh;
+				position:fixed;
+				height:100vh;
+				width:270px;
+				z-index:9999;
+				display:none;
+			}
+			.side a{
+				text-decoration:none;
+			}
+			.side i{
+				display:block;
+				text-decoration:none;
+				color:#ccc;
+				padding:20px 30px;
+			}
+			.side i:hover{
+				cursor:pointer;
+				color:#000;
+				background:#610061;
+				padding-right:30px;
+				transition:.5s ease-in-out;
+			}
+			.fa{
+				padding:5px;
+			}
+			.fa:hover{
+				border-radius:6px;
+				padding:8px;
+				transition:.9s ease-in-out;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="top_nav">
+			<span class="popup" onclick="toggle_pop()"><b class="ton">&#9776;</b></span>
+			<div class="logo">
+			DH
+			</div>
+		</nav>
+		<div class="side" id="popup">
+			<a href="index.html"><i class="fa fa-home">&nbsp;&nbsp;&nbsp;HOME</i></a>
+			<a href="services.html"><i class="fa fa-gear">&nbsp;&nbsp;&nbsp;SERVICES</i></a>
+			<a href="contact.html"><i class="fa fa-envelope">&nbsp;&nbsp;&nbsp;CONTACT</i></a>
+		</div>
+		<center>
+			<div class="service">
+				<h4>Services <b style="color:purple;">and</b> experties</h4>
+				<br>
+				<p><b>
+					In need of a full stack developer?
+					or a web site developer for your business/company,
+					we are right here at your service.
+				</b></p>
+			</div>
+		</center>
+		<div class="aim">
+			<h3 style="padding:15px 30px;"><b style="color:purple;">Aim</b> of service:</h3>
+			<p><b>Helping business build modern digital solutions that grows brands, 
+			<br>
+			improve workflow, and increase online visibilty.</b></p>
+		</div>
+		<br>
+		<div class="core">
+			<h3 style="padding:15px 30px;"><b style="color:purple;">Core</b> services</h3>
+			<div class="cub">
+				<div class="cub_parent">
+				<div class="cud">
+					<p><b>Full stack Development</b></p>
+					<p>
+						Design and define  what website needs to do, full system integration, maintenance and scaling.
+					</p>
+					<br>
+					<center>
+					<button>Explore more</button>
+					</center>
+				</div>
+				<div class="cud">
+					<p><b>Web Development</b></p>
+					<p>
+						Custom responsive website build for speed, performance,and user expertice
+					</p>
+					<br>
+					<center>
+					<button>Explore more</button>
+					</center>
+				</div>
+				<div class="cud">
+					<h4><b>Data Analysis</b></h4>
+					<p>
+						Transforming raw data into meaninful insights using spreadsheet, sql and python
+					</p>
+					<br>
+					<center>
+					<button>Explore more</button>
+					</center>
+				</div>
+			</div>
+			</div>
+		</div>
+		<br>
+		<div class="work">
+			<h3 style="padding:15px 30px;" style="margin:20px;"><b style="color:purple;">How</b> i work</h3>
+			<div class="work_how">
+			<div class="work_parent">
+				<div class="woh">
+					<p><b>1. DISCOVERY</b></p>
+					<p>
+						Understanding your business goals, audience, and project requirements.
+					</p>
+				</div>
+				<div class="woh">
+					<p><b>2. STRATEGY</b></p>
+					<p>
+						Planning the best structure, features, and development roadmap.
+					</p>
+				</div>
+				<div class="woh">
+					<p><b>3. EXECUTION</b></p>
+					<p>
+						Designing, developing, testing and delivering a polished solution.
+					</p>
+				</div>
+			</div>
+			</div>
+		</div>
+		<center>
+		<div class="lets">
+			<p><b>Let's discuss your project</b></p>
+			<p>Get a free consultation to determine the best approach</p>
+			<button>Schedule call</button>
+		</div>
+		</center>
+		<center>
+		<div class="bottom_nav">
+			<P><b>&copy; 2026 Dhoro. ALL Rights Reseverved</b></P>
+		</div>
+		</center>
+		<script>
+			let popup = document.getElementById("popup");
+			function toggle_pop(){
+				if (popup.style.display === 'block'){
+					popup.style.display = 'none';
+				}else{
+					popup.style.display = 'block';
+				}
+			}
+		</script>
+	</body>
+</html>
